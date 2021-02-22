@@ -1,0 +1,300 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+a:hover {
+  text-decoration: none;
+}
+ul,
+ol {
+  list-style: none;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.items-title {
+  font-size: 24px;
+  font-weight: bolder;
+  color: #0066cc;
+  border-bottom: 3px solid #0066cc;
+}
+.about-me-left,
+.work-left,
+.contact-left {
+  margin-right: 50px;
+  margin-top: 10px;
+}
+/****************************header-start*****************************/
+header {
+  height: 100px;
+}
+header .container {
+  display: flex;
+}
+header .container p {
+  flex: 1;
+  font-size: 36px;
+  font-weight: bolder;
+  margin-left: 20px;
+  line-height: 100px;
+  color: #0066cc;
+  height: 70px;
+}
+header .container p i {
+  color: #99ccff;
+}
+header .container nav {
+  flex: 1;
+  z-index: 99;
+}
+header .container nav ul {
+  margin-top: 35px;
+  display: flex;
+}
+header .container nav ul li {
+  flex: 1;
+  margin-right: 20px;
+  font-size: 24px;
+  line-height: 45px;
+  width: 120px;
+  height: 100%;
+  text-align: center;
+  font-weight: bolder;
+  letter-spacing: 1px;
+}
+header .container nav ul li a {
+  display: inline-block;
+  width: 100%;
+  color: #0066cc;
+}
+header .container nav ul li a:hover {
+  border-bottom: 3px solid #0066cc;
+}
+/*****************************header-end******************************/
+/****************************selfie-start*****************************/
+.selfie {
+  width: 100%;
+  height: 500px;
+  background: url("../images/selfie-img1.jpg") no-repeat center center;
+  position: relative;
+}
+.selfie .subtitle {
+  z-index: 99;
+  display: inline-block;
+  color: #0066cc;
+  font-size: 100px;
+  font-weight: bolder;
+  font-style: italic;
+  position: absolute;
+  bottom: 0;
+  right: 30px;
+  text-shadow: 1px 1px 1px #99ccff;
+}
+/*****************************selfie-end******************************/
+/****************************About-myself-start*****************************/
+.about-me {
+  margin: 20px;
+}
+.about-me .container {
+  display: flex;
+}
+.about-me .container .about-me-left {
+  flex: 1;
+}
+.about-me .container .about-me-right {
+  flex: 3;
+}
+.about-me .container .about-me-right p {
+  width: 90%;
+}
+/*****************************About-myself-end******************************/
+/****************************work-start*****************************/
+.work {
+  margin: 20px;
+}
+.work .container {
+  display: flex;
+}
+.work .container .work-left {
+  flex: 1;
+}
+.work .container .work-right {
+  flex: 3;
+}
+.work .container .work-right .work-top {
+  width: 91%;
+  height: 360px;
+  margin: 5px;
+  background-color: #99ccff;
+  border: 10px solid #99ccff;
+  overflow: hidden;
+  border-radius: 15px;
+  position: relative;
+}
+.work .container .work-right .work-top a {
+  filter: blur(5px);
+  opacity: 0.7;
+}
+.work .container .work-right .work-top a img {
+  width: 100%;
+}
+.work .container .work-right .work-top a:hover {
+  filter: blur(0);
+  opacity: 1;
+}
+.work .container .work-right .work-top .work-top-title {
+  padding: 10px 50px 10px 15px;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  background-color: #0066cc;
+  display: inline-block;
+  z-index: 99;
+  border-top-right-radius: 14px;
+  border-bottom-right-radius: 14px;
+  box-shadow: 1px 2px 5px #333;
+}
+.work .container .work-right .work-top .work-top-title p {
+  color: #99ccff;
+  font-size: 24px;
+  font-weight: bolder;
+}
+.work .container .work-right .work-top .work-top-title p:last-child {
+  font-size: 18px;
+  font-weight: normal;
+}
+.work .container .work-right .work-items {
+  float: left;
+  margin: 5px;
+  width: 45%;
+  height: 220px;
+  background-color: #99ccff;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 8px solid #99ccff;
+  position: relative;
+}
+.work .container .work-right .work-items .work-item-title {
+  padding: 10px 40px 10px 15px;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  background-color: #0066cc;
+  display: inline-block;
+  z-index: 99;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 1px 2px 3px #333;
+}
+.work .container .work-right .work-items .work-item-title p {
+  color: #99ccff;
+  font-size: 20px;
+  font-weight: bolder;
+}
+.work .container .work-right .work-items .work-item-title p:last-child {
+  font-size: 14px;
+  font-weight: normal;
+}
+.work .container .work-right .work-items a {
+  filter: blur(3px);
+  opacity: 0.7;
+}
+.work .container .work-right .work-items a img {
+  width: 101%;
+}
+.work .container .work-right .work-items a:hover {
+  filter: blur(0);
+  opacity: 1;
+}
+/*****************************work-end******************************/
+/****************************footer-start*****************************/
+footer {
+  margin: 20px;
+}
+footer .container {
+  display: flex;
+}
+footer .container .contact-left {
+  flex: 1;
+}
+footer .container .contact-right {
+  flex: 3;
+}
+footer .container .contact-right ul {
+  margin-top: 30px;
+  display: flex;
+}
+footer .container .contact-right ul li {
+  color: #0066cc;
+  float: left;
+  margin-right: 20px;
+  font-size: 24px;
+  line-height: 45px;
+  border-bottom: 3px solid #0066cc;
+  text-align: center;
+  font-weight: bolder;
+}
+footer .container .contact-right ul li a {
+  color: #0066cc;
+}
+/*****************************footer-end******************************/
+/*************max-width*************/
+@media screen and (max-width: 576px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .container .about-me-left,
+  .container .work-left,
+  .container .contact-left {
+    margin: 0 auto;
+  }
+  #About .about-me-right p {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .container .about-me-left,
+  .container .work-left,
+  .container .contact-left {
+    margin: 20px auto;
+  }
+  .container .about-me-left span,
+  .container .work-left span,
+  .container .contact-left span {
+    font-size: 42px;
+  }
+  header {
+    height: 180px;
+  }
+  header .container {
+    background: url("../images/selfie-img1.jpg") no-repeat center 40%;
+    background-size: 200%;
+  }
+  header .container .name-logo {
+    margin: 0 auto;
+  }
+  #About .about-me-right p {
+    width: 100%;
+  }
+}
+/*************min-width*************/
+/*# sourceMappingURL=index.css.map */

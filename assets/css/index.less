@@ -1,0 +1,367 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+  color: #000;
+  &:hover{
+    text-decoration: none;
+  }
+}
+
+ul, ol{
+  list-style: none;
+}
+
+.fl{
+  float: left;
+}
+
+.fr{
+  float: right;
+}
+
+.items-title{
+  font-size: 24px;
+  font-weight: bolder;
+  color: @skyBlue;
+  border-bottom: 3px solid @skyBlue;
+}
+
+.about-me-left,
+.work-left,
+.contact-left{
+  margin-right: 50px;
+  margin-top: 10px;
+}
+
+@skyBlue: #0066cc;
+@lightBlue: #99ccff;
+
+/****************************header-start*****************************/
+header{
+  height: 100px;
+  .container{
+    display: flex;
+    p{
+      flex: 1;
+      font-size: 36px;
+      font-weight: bolder;
+      margin-left: 20px;
+      line-height: 100px;
+      color: @skyBlue;
+      //background-color: @skyBlue;
+      height: 70px;
+      i{
+        color: @lightBlue;
+      }
+    }
+    nav{
+      flex: 1;
+      z-index: 99;
+      ul{
+        margin-top: 35px;
+        display: flex;
+        li{
+          flex: 1;
+          //background-color: red;
+          margin-right: 20px;
+          font-size: 24px;
+          line-height: 45px;
+          width: 120px;
+          height: 100%;
+          text-align: center;
+          font-weight: bolder;
+          letter-spacing: 1px;
+          a{
+            display: inline-block;
+            width: 100%;
+            color: @skyBlue;
+            &:hover{
+              border-bottom: 3px solid @skyBlue;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/*****************************header-end******************************/
+
+/****************************selfie-start*****************************/
+.selfie{
+  width: 100%;
+  height: 500px;
+  background: url("./../images/selfie-img1.jpg") no-repeat center center;
+  position: relative;
+  .subtitle{
+    //background-color: red;
+    z-index: 99;
+    display: inline-block;
+    color: @skyBlue;
+    font-size: 100px;
+    font-weight: bolder;
+    font-style: italic;
+    position: absolute;
+    bottom: 0;
+    right: 30px;
+    text-shadow: 1px 1px 1px @lightBlue;
+  }
+}
+
+/*****************************selfie-end******************************/
+
+/****************************About-myself-start*****************************/
+.about-me{
+  margin: 20px;
+  .container{
+    //background-color: grey;
+    display: flex;
+    .about-me-left{
+      flex: 1;
+    }
+
+    .about-me-right{
+      flex: 3;
+      p{
+        width: 90%;
+      }
+    }
+  }
+}
+
+/*****************************About-myself-end******************************/
+
+/****************************work-start*****************************/
+.work{
+  margin: 20px;
+  .container{
+    //background-color: yellow;
+    display: flex;
+    .work-left{
+      flex: 1;
+    }
+    .work-right{
+      flex: 3;
+      //display: flex;
+      .work-top{
+        width: 91%;
+        height: 360px;
+        margin: 5px;
+        background-color: @lightBlue;
+        border: 10px solid @lightBlue;
+        overflow: hidden;
+        border-radius: 15px;
+        position: relative;
+        a{
+          filter: blur(5px);
+          opacity: 0.7;
+          img{
+            width: 100%;
+            //height: 100%;
+          }
+          &:hover{
+            filter: blur(0);
+            opacity: 1;
+          }
+        }
+        .work-top-title{
+          padding: 10px 50px 10px 15px;
+          position: absolute;
+          bottom: 20px;
+          left: 0;
+          background-color: @skyBlue;
+          display: inline-block;
+          z-index: 99;
+          border-top-right-radius: 14px;
+          border-bottom-right-radius: 14px;
+          box-shadow: 1px 2px 5px #333;
+          p{
+            color: @lightBlue ;
+            font-size: 24px;
+            font-weight: bolder;
+            &:last-child{
+              font-size: 18px;
+              font-weight: normal;
+            }
+          }
+        }
+      }
+      .work-items{
+        float: left;
+        margin: 5px;
+        width: 45%;
+        height: 220px;
+        background-color: @lightBlue;
+        border-radius: 10px;
+        overflow: hidden;
+        border: 8px solid @lightBlue;
+        position: relative;
+        .work-item-title{
+          padding: 10px 40px 10px 15px;
+          position: absolute;
+          bottom: 10px;
+          left: 0;
+          background-color: @skyBlue;
+          display: inline-block;
+          z-index: 99;
+          border-top-right-radius: 10px;
+          border-bottom-right-radius: 10px;
+          box-shadow: 1px 2px 3px #333;
+          p{
+            color: @lightBlue ;
+            font-size: 20px;
+            font-weight: bolder;
+            &:last-child{
+              font-size: 14px;
+              font-weight: normal;
+            }
+          }
+        }
+        a{
+          filter: blur(3px);
+          opacity: 0.7;
+          img{
+            width: 101%;
+          }
+          &:hover{
+            filter: blur(0);
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+/*****************************work-end******************************/
+
+/****************************footer-start*****************************/
+footer{
+  margin: 20px;
+  .container{
+    //background-color: blue;
+    display: flex;
+    .contact-left{
+      flex: 1;
+    }
+    .contact-right{
+      flex: 3;
+      ul{
+        margin-top: 30px;
+        display: flex;
+        li{
+          color: @skyBlue;
+          float: left;
+          //background-color: red;
+          margin-right: 20px;
+          font-size: 24px;
+          line-height: 45px;
+          border-bottom: 3px solid @skyBlue;
+          //width: 120px;
+          text-align: center;
+          font-weight: bolder;
+          a{
+            color: @skyBlue;
+          }
+        }
+      }
+    }
+  }
+}
+/*****************************footer-end******************************/
+
+/*************max-width*************/
+@media screen and (max-width: 350px){
+
+}
+
+@media screen and (max-width: 576px){
+  .container{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .container{
+    display: flex;
+    flex-direction: column;
+    .about-me-left,
+    .work-left,
+    .contact-left{
+      margin: 0 auto;
+    }
+  }
+  #About{
+    .about-me-right{
+      p{
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px){
+  .container{
+    .subtitle{
+
+    }
+    display: flex;
+    flex-direction: column;
+    .about-me-left,
+    .work-left,
+    .contact-left{
+      margin: 20px auto;
+      span{
+        font-size: 42px;
+      }
+    }
+  }
+
+  header{
+    height: 180px;
+    .container{
+      background: url("./../images/selfie-img1.jpg") no-repeat center 40%;
+      background-size: 200%;
+
+      .name-logo{
+        margin: 0 auto;
+      }
+    }
+  }
+  #About{
+    .about-me-right{
+      p{
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px){
+
+}
+
+/*************min-width*************/
+@media screen and (min-width: 350px){
+
+}
+
+@media screen and (min-width: 576px){
+
+}
+
+@media screen and (min-width: 768px){
+
+}
+
+@media screen and (min-width: 992px){
+
+}
+
+@media screen and (min-width: 1200px){
+
+}
