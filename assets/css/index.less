@@ -94,21 +94,26 @@ header{
 /****************************selfie-start*****************************/
 .selfie{
   width: 100%;
-  height: 500px;
-  background: url("./../images/selfie-img1.jpg") no-repeat center center;
+  background-color: #000;
   position: relative;
-  .subtitle{
-    //background-color: red;
-    z-index: 99;
-    display: inline-block;
-    color: @skyBlue;
-    font-size: 100px;
-    font-weight: bolder;
-    font-style: italic;
-    position: absolute;
-    bottom: 0;
-    right: 30px;
-    text-shadow: 1px 1px 1px @lightBlue;
+  .container{
+    height: 500px;
+    background: url("./../images/selfie-img1.jpg") no-repeat bottom center;
+    background-size: cover;
+    //position: relative;
+    .subtitle{
+      //background-color: red;
+      z-index: 99;
+      display: inline-block;
+      color: @skyBlue;
+      font-size: 100px;
+      font-weight: bolder;
+      font-style: italic;
+      position: absolute;
+      bottom: 0;
+      right: 30px;
+      text-shadow: 1px 1px 1px @lightBlue;
+    }
   }
 }
 
@@ -146,7 +151,8 @@ header{
     }
     .work-right{
       flex: 3;
-      //display: flex;
+      display: flex;
+      flex-wrap: wrap;
       .work-top{
         width: 91%;
         height: 360px;
@@ -191,7 +197,7 @@ header{
         }
       }
       .work-items{
-        float: left;
+        flex: 45%;
         margin: 5px;
         width: 45%;
         height: 220px;
@@ -252,9 +258,11 @@ footer{
       ul{
         margin-top: 30px;
         display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
         li{
           color: @skyBlue;
-          float: left;
+
           //background-color: red;
           margin-right: 20px;
           font-size: 24px;
@@ -306,6 +314,7 @@ footer{
 
 @media screen and (max-width: 992px){
   .container{
+    width: 100%;
     .subtitle{
 
     }
@@ -324,8 +333,8 @@ footer{
   header{
     height: 180px;
     .container{
-      background: url("./../images/selfie-img1.jpg") no-repeat center 40%;
-      background-size: 200%;
+      background: url("./../images/selfie-img1.jpg") no-repeat center top;
+      background-size: cover;
 
       .name-logo{
         margin: 0 auto;
@@ -363,5 +372,8 @@ footer{
 }
 
 @media screen and (min-width: 1200px){
-
+  .container{
+    width: 90%;
+    margin: 0 auto;
+  }
 }

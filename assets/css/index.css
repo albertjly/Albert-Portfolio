@@ -82,11 +82,15 @@ header .container nav ul li a:hover {
 /****************************selfie-start*****************************/
 .selfie {
   width: 100%;
-  height: 500px;
-  background: url("../images/selfie-img1.jpg") no-repeat center center;
+  background-color: #000;
   position: relative;
 }
-.selfie .subtitle {
+.selfie .container {
+  height: 500px;
+  background: url("../images/selfie-img1.jpg") no-repeat bottom center;
+  background-size: cover;
+}
+.selfie .container .subtitle {
   z-index: 99;
   display: inline-block;
   color: #0066cc;
@@ -128,6 +132,8 @@ header .container nav ul li a:hover {
 }
 .work .container .work-right {
   flex: 3;
+  display: flex;
+  flex-wrap: wrap;
 }
 .work .container .work-right .work-top {
   width: 91%;
@@ -172,7 +178,7 @@ header .container nav ul li a:hover {
   font-weight: normal;
 }
 .work .container .work-right .work-items {
-  float: left;
+  flex: 45%;
   margin: 5px;
   width: 45%;
   height: 220px;
@@ -231,10 +237,11 @@ footer .container .contact-right {
 footer .container .contact-right ul {
   margin-top: 30px;
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 footer .container .contact-right ul li {
   color: #0066cc;
-  float: left;
   margin-right: 20px;
   font-size: 24px;
   line-height: 45px;
@@ -269,6 +276,7 @@ footer .container .contact-right ul li a {
 }
 @media screen and (max-width: 992px) {
   .container {
+    width: 100%;
     display: flex;
     flex-direction: column;
   }
@@ -286,8 +294,8 @@ footer .container .contact-right ul li a {
     height: 180px;
   }
   header .container {
-    background: url("../images/selfie-img1.jpg") no-repeat center 40%;
-    background-size: 200%;
+    background: url("../images/selfie-img1.jpg") no-repeat center top;
+    background-size: cover;
   }
   header .container .name-logo {
     margin: 0 auto;
@@ -297,4 +305,10 @@ footer .container .contact-right ul li a {
   }
 }
 /*************min-width*************/
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
 /*# sourceMappingURL=index.css.map */
