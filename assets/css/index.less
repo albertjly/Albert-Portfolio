@@ -1,3 +1,7 @@
+@darkBlue: #0066cc;
+@lightBlue: #99ccff;
+@lightYellow: #ffffcc;
+
 *{
   margin: 0;
   padding: 0;
@@ -27,8 +31,8 @@ ul, ol{
 .items-title{
   font-size: 24px;
   font-weight: bolder;
-  color: @skyBlue;
-  border-bottom: 3px solid @skyBlue;
+  color: @darkBlue;
+  border-bottom: 3px solid @darkBlue;
 }
 
 .about-me-left,
@@ -43,13 +47,6 @@ ul, ol{
   margin: 0 auto;
 }
 
-body{
-  background-color: #333;
-}
-
-@skyBlue: #0066cc;
-@lightBlue: #99ccff;
-
 /****************************header-start*****************************/
 header{
   height: 100px;
@@ -61,8 +58,8 @@ header{
       font-weight: bolder;
       margin-left: 20px;
       line-height: 100px;
-      color: @skyBlue;
-      //background-color: @skyBlue;
+      color: @darkBlue;
+      //background-color: @darkBlue;
       height: 70px;
       i{
         color: @lightBlue;
@@ -88,9 +85,9 @@ header{
           a{
             display: inline-block;
             width: 100%;
-            color: @skyBlue;
+            color: @darkBlue;
             &:hover{
-              border-bottom: 3px solid @skyBlue;
+              border-bottom: 3px solid @darkBlue;
             }
           }
         }
@@ -114,14 +111,14 @@ header{
       //background-color: red;
       z-index: 99;
       display: inline-block;
-      color: @skyBlue;
+      color: @darkBlue;
       font-size: 80px;
       font-weight: bolder;
       font-style: italic;
       position: absolute;
       bottom: 30px;
       right: 100px;
-      text-shadow: 1px 1px 1px @lightBlue;
+      text-shadow: 3px 3px 6px @lightBlue;
     }
   }
 }
@@ -189,7 +186,7 @@ header{
           position: absolute;
           bottom: 20px;
           left: 0;
-          background-color: @skyBlue;
+          background-color: @darkBlue;
           display: inline-block;
           z-index: 99;
           border-top-right-radius: 14px;
@@ -221,7 +218,7 @@ header{
           position: absolute;
           bottom: 10px;
           left: 0;
-          background-color: @skyBlue;
+          background-color: @darkBlue;
           display: inline-block;
           z-index: 99;
           border-top-right-radius: 10px;
@@ -272,7 +269,7 @@ footer{
         justify-content: space-around;
         flex-wrap: wrap;
         li{
-          color: @skyBlue;
+          color: @darkBlue;
           //background-color: red;
           margin-right: 20px;
           font-size: 24px;
@@ -282,9 +279,9 @@ footer{
           font-weight: bolder;
           a{
             flex: 1;
-            color: @skyBlue;
+            color: @darkBlue;
             display: inline-block;
-            border-bottom: 3px solid @skyBlue;
+            border-bottom: 3px solid @darkBlue;
           }
         }
       }
@@ -294,51 +291,13 @@ footer{
 /*****************************footer-end******************************/
 
 /*************max-width*************/
-@media screen and (max-width: 350px){
+@media screen and (max-width: 1200px){
 
-}
-
-@media screen and (max-width: 576px){
-  .container{
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-@media screen and (max-width: 768px){
-  .container{
-    display: flex;
-    flex-direction: column;
-    .about-me-left,
-    .work-left,
-    .contact-left{
-      margin: 0 auto;
-    }
-    .work-right{
-      margin: 0 auto;
-    }
-  }
-  #About{
-    .about-me-right{
-      width: 85%;
-      margin: 0 auto;
-    }
-  }
-  footer{
-    .container{
-      .contact-right ul{
-        flex-direction: column;
-      }
-    }
-  }
 }
 
 @media screen and (max-width: 992px){
   .container{
     width: 100%;
-    .subtitle{
-
-    }
     display: flex;
     flex-direction: column;
     .about-me-left,
@@ -360,12 +319,36 @@ footer{
       background: url("./../images/selfie-img1.jpg") no-repeat center top;
       background-size: cover;
       background-attachment: fixed;
-
       .name-logo{
-        margin: 0 auto;
+        font-size: 36px;
+        line-height: 80px;
+      }
+      nav{
+        ul{
+          margin-top: 10px;
+          //flex-direction: column;
+          li{
+            margin: 5px;
+            height: 50px;
+            //width: 85%;
+            background-color: rgba(255, 255, 255, .3);
+            border-radius: 10px;
+          }
+        }
       }
     }
   }
+
+  .selfie{
+    .container{
+      .subtitle{
+        p{
+          font-size: 60px;
+        }
+      }
+    }
+  }
+
   #About{
     .about-me-right{
       width: 85%;
@@ -377,9 +360,128 @@ footer{
   }
 }
 
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 768px){
+  .container{
+    display: flex;
+    flex-direction: column;
+    .about-me-left,
+    .work-left,
+    .contact-left{
+      margin: 0 auto;
+    }
+    .work-right{
+      margin: 0 auto;
+    }
+  }
+  header{
+    .container{
 
+      .name-logo{
+        font-size: 30px;
+        line-height: 50px;
+        //text-shadow: 3px 3px 10px @darkBlue;
+        color: @darkBlue;
+        //background-color: @darkBlue;
+        height: 70px;
+        margin: 0 auto;
+      }
+      nav{
+        //margin: 0 auto;
+        ul{
+          margin: 0 auto;
+          //flex-direction: column;
+          li{
+            margin: 2px auto;
+            height: 50px;
+            width: 85%;
+            background-color: rgba(255, 255, 255, .3);
+            border-radius: 10px;
+          }
+        }
+      }
+    }
+  }
+  .selfie{
+    .container{
+      .subtitle{
+        p{
+          font-size: 48px;
+        }
+      }
+    }
+  }
+  #About{
+    .about-me-right{
+      width: 85%;
+      margin: 0 auto;
+    }
+  }
+  footer{
+    .container{
+      .contact-right ul{
+        flex-direction: column;
+      }
+    }
+  }
 }
+
+@media screen and (max-width: 576px){
+  .container{
+    display: flex;
+    flex-direction: column;
+  }
+  header{
+    .container{
+
+      .name-logo{
+        font-size: 30px;
+        line-height: 50px;
+        //text-shadow: 3px 3px 10px @darkBlue;
+        color: @darkBlue;
+        //background-color: @darkBlue;
+        height: 70px;
+        margin: 0 auto;
+      }
+      nav{
+        //margin: 0 auto;
+        ul{
+          display: flex;
+          margin: 0 auto;
+          flex-direction: column;
+          li{
+            flex: 85%;
+            //margin: 2px auto;
+            height: 50px;
+            background-color: rgba(255, 255, 255, .3);
+            border-radius: 10px;
+          }
+        }
+      }
+    }
+  }
+  .selfie{
+    .container{
+      .subtitle{
+        p{
+          font-size: 48px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 350px){
+  .selfie{
+    .container{
+      .subtitle{
+        p{
+          font-size: 48px;
+        }
+      }
+    }
+  }
+}
+
 
 /*************min-width*************/
 @media screen and (min-width: 350px){
