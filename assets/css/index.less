@@ -38,6 +38,11 @@ ul, ol{
   margin-top: 10px;
 }
 
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 @skyBlue: #0066cc;
 @lightBlue: #99ccff;
 
@@ -95,23 +100,23 @@ header{
 .selfie{
   width: 100%;
   background-color: #000;
-  position: relative;
   .container{
     height: 500px;
-    background: url("./../images/selfie-img1.jpg") no-repeat bottom center;
+    background: url("./../images/selfie-img1.jpg") no-repeat center center;
     background-size: cover;
-    //position: relative;
+    background-attachment: fixed;
+    position: relative;
     .subtitle{
       //background-color: red;
       z-index: 99;
       display: inline-block;
       color: @skyBlue;
-      font-size: 100px;
+      font-size: 80px;
       font-weight: bolder;
       font-style: italic;
       position: absolute;
-      bottom: 0;
-      right: 30px;
+      bottom: 30px;
+      right: 100px;
       text-shadow: 1px 1px 1px @lightBlue;
     }
   }
@@ -153,8 +158,9 @@ header{
       flex: 3;
       display: flex;
       flex-wrap: wrap;
+      width: 85%;
       .work-top{
-        width: 91%;
+        //width: 91%;
         height: 360px;
         margin: 5px;
         background-color: @lightBlue;
@@ -255,24 +261,26 @@ footer{
     }
     .contact-right{
       flex: 3;
+      height: 100px;
       ul{
-        margin-top: 30px;
+        //margin-top: 30px;
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         flex-wrap: wrap;
         li{
           color: @skyBlue;
-
           //background-color: red;
           margin-right: 20px;
           font-size: 24px;
           line-height: 45px;
-          border-bottom: 3px solid @skyBlue;
           //width: 120px;
           text-align: center;
           font-weight: bolder;
           a{
+            flex: 1;
             color: @skyBlue;
+            display: inline-block;
+            border-bottom: 3px solid @skyBlue;
           }
         }
       }
@@ -302,11 +310,20 @@ footer{
     .contact-left{
       margin: 0 auto;
     }
+    .work-right{
+      margin: 0 auto;
+    }
   }
   #About{
     .about-me-right{
-      p{
-        width: 100%;
+      width: 85%;
+      margin: 0 auto;
+    }
+  }
+  footer{
+    .container{
+      .contact-right ul{
+        flex-direction: column;
       }
     }
   }
@@ -328,13 +345,17 @@ footer{
         font-size: 42px;
       }
     }
+    .work-right{
+      margin: 0 auto;
+    }
   }
 
   header{
-    height: 180px;
+    //height: 180px;
     .container{
       background: url("./../images/selfie-img1.jpg") no-repeat center top;
       background-size: cover;
+      background-attachment: fixed;
 
       .name-logo{
         margin: 0 auto;
@@ -343,6 +364,8 @@ footer{
   }
   #About{
     .about-me-right{
+      width: 85%;
+      margin: 0 auto;
       p{
         width: 100%;
       }
@@ -372,8 +395,5 @@ footer{
 }
 
 @media screen and (min-width: 1200px){
-  .container{
-    width: 90%;
-    margin: 0 auto;
-  }
+
 }

@@ -32,6 +32,10 @@ ol {
   margin-right: 50px;
   margin-top: 10px;
 }
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 /****************************header-start*****************************/
 header {
   height: 100px;
@@ -83,23 +87,24 @@ header .container nav ul li a:hover {
 .selfie {
   width: 100%;
   background-color: #000;
-  position: relative;
 }
 .selfie .container {
   height: 500px;
-  background: url("../images/selfie-img1.jpg") no-repeat bottom center;
+  background: url("../images/selfie-img1.jpg") no-repeat center center;
   background-size: cover;
+  background-attachment: fixed;
+  position: relative;
 }
 .selfie .container .subtitle {
   z-index: 99;
   display: inline-block;
   color: #0066cc;
-  font-size: 100px;
+  font-size: 80px;
   font-weight: bolder;
   font-style: italic;
   position: absolute;
-  bottom: 0;
-  right: 30px;
+  bottom: 30px;
+  right: 100px;
   text-shadow: 1px 1px 1px #99ccff;
 }
 /*****************************selfie-end******************************/
@@ -134,9 +139,9 @@ header .container nav ul li a:hover {
   flex: 3;
   display: flex;
   flex-wrap: wrap;
+  width: 85%;
 }
 .work .container .work-right .work-top {
-  width: 91%;
   height: 360px;
   margin: 5px;
   background-color: #99ccff;
@@ -233,11 +238,11 @@ footer .container .contact-left {
 }
 footer .container .contact-right {
   flex: 3;
+  height: 100px;
 }
 footer .container .contact-right ul {
-  margin-top: 30px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
 footer .container .contact-right ul li {
@@ -245,12 +250,14 @@ footer .container .contact-right ul li {
   margin-right: 20px;
   font-size: 24px;
   line-height: 45px;
-  border-bottom: 3px solid #0066cc;
   text-align: center;
   font-weight: bolder;
 }
 footer .container .contact-right ul li a {
+  flex: 1;
   color: #0066cc;
+  display: inline-block;
+  border-bottom: 3px solid #0066cc;
 }
 /*****************************footer-end******************************/
 /*************max-width*************/
@@ -270,8 +277,15 @@ footer .container .contact-right ul li a {
   .container .contact-left {
     margin: 0 auto;
   }
-  #About .about-me-right p {
-    width: 100%;
+  .container .work-right {
+    margin: 0 auto;
+  }
+  #About .about-me-right {
+    width: 85%;
+    margin: 0 auto;
+  }
+  footer .container .contact-right ul {
+    flex-direction: column;
   }
 }
 @media screen and (max-width: 992px) {
@@ -290,14 +304,19 @@ footer .container .contact-right ul li a {
   .container .contact-left span {
     font-size: 42px;
   }
-  header {
-    height: 180px;
+  .container .work-right {
+    margin: 0 auto;
   }
   header .container {
     background: url("../images/selfie-img1.jpg") no-repeat center top;
     background-size: cover;
+    background-attachment: fixed;
   }
   header .container .name-logo {
+    margin: 0 auto;
+  }
+  #About .about-me-right {
+    width: 85%;
     margin: 0 auto;
   }
   #About .about-me-right p {
@@ -305,10 +324,4 @@ footer .container .contact-right ul li a {
   }
 }
 /*************min-width*************/
-@media screen and (min-width: 1200px) {
-  .container {
-    width: 90%;
-    margin: 0 auto;
-  }
-}
 /*# sourceMappingURL=index.css.map */
