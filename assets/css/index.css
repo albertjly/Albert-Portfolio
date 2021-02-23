@@ -36,6 +36,9 @@ ol {
   max-width: 1200px;
   margin: 0 auto;
 }
+body {
+  background-color: #333;
+}
 /****************************header-start*****************************/
 header {
   height: 100px;
