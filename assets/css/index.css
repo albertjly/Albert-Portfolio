@@ -145,7 +145,7 @@ header .container nav ul li a:hover {
   height: 360px;
   margin: 5px;
   background-color: #99ccff;
-  border: 10px solid #99ccff;
+  border: 6px solid #99ccff;
   overflow: hidden;
   border-radius: 15px;
   position: relative;
@@ -172,6 +172,7 @@ header .container nav ul li a:hover {
   border-top-right-radius: 14px;
   border-bottom-right-radius: 14px;
   box-shadow: 1px 2px 5px #333;
+  opacity: 0.8;
 }
 .work .container .work-right .work-top .work-top-title p {
   color: #99ccff;
@@ -190,10 +191,11 @@ header .container nav ul li a:hover {
   background-color: #99ccff;
   border-radius: 10px;
   overflow: hidden;
-  border: 8px solid #99ccff;
+  border: 4px solid #99ccff;
   position: relative;
 }
 .work .container .work-right .work-items .work-item-title {
+  opacity: 0.8;
   padding: 10px 40px 10px 15px;
   position: absolute;
   bottom: 10px;
@@ -331,16 +333,24 @@ footer .container .contact-right ul li a {
   }
   header .container nav ul {
     margin: 0 auto;
+    flex-direction: column;
   }
   header .container nav ul li {
     margin: 2px auto;
     height: 50px;
-    width: 85%;
+    width: 75%;
     background-color: rgba(255, 255, 255, 0.3);
     border-radius: 10px;
   }
+  .work .container .work-right .work-top {
+    max-height: 280px;
+  }
+  .work .container .work-right .work-items {
+    min-width: 90%;
+    max-height: 280px;
+  }
   .selfie .container .subtitle p {
-    font-size: 48px;
+    font-size: 56px;
   }
   #About .about-me-right {
     width: 85%;
@@ -373,13 +383,27 @@ footer .container .contact-right ul li a {
     background-color: rgba(255, 255, 255, 0.3);
     border-radius: 10px;
   }
+  .work .container .work-right .work-top {
+    max-height: 280px;
+  }
+  .work .container .work-right .work-items {
+    min-width: 90%;
+    max-height: 180px;
+  }
   .selfie .container .subtitle p {
-    font-size: 48px;
+    font-size: 54px;
   }
 }
 @media screen and (max-width: 350px) {
+  .work .container .work-right .work-top {
+    max-height: 240px;
+  }
+  .work .container .work-right .work-items {
+    min-width: 90%;
+    max-height: 140px;
+  }
   .selfie .container .subtitle p {
-    font-size: 48px;
+    font-size: 50px;
   }
 }
 /*************min-width*************/
