@@ -37,7 +37,8 @@ ul, ol{
 
 .about-me-left,
 .work-left,
-.contact-left{
+.contact-left,
+.resume-left{
   margin-right: 50px;
   margin-top: 10px;
 }
@@ -139,6 +140,9 @@ header{
       flex: 3;
       p{
         width: 90%;
+        font-size: 16px;
+        font-weight: bold;
+        color: @darkBlue;
       }
     }
   }
@@ -165,7 +169,7 @@ header{
         height: 360px;
         margin: 5px;
         background-color: @lightBlue;
-        border: 6px solid @lightBlue;
+        border: 3px solid @lightBlue;
         overflow: hidden;
         border-radius: 15px;
         position: relative;
@@ -252,6 +256,31 @@ header{
   }
 }
 /*****************************work-end******************************/
+
+/****************************Résumé-start*****************************/
+#Resume{
+  margin: 20px;
+  .container{
+    //background-color: grey;
+    display: flex;
+    .resume-left{
+      flex: 1;
+    }
+
+    .resume-right{
+      flex: 3;
+      p{
+        width: 90%;
+        margin: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        color: @darkBlue;
+      }
+    }
+  }
+}
+
+/*****************************Résumé-end******************************/
 
 /****************************footer-start*****************************/
 footer{

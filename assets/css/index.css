@@ -28,7 +28,8 @@ ol {
 }
 .about-me-left,
 .work-left,
-.contact-left {
+.contact-left,
+.resume-left {
   margin-right: 50px;
   margin-top: 10px;
 }
@@ -123,6 +124,9 @@ header .container nav ul li a:hover {
 }
 .about-me .container .about-me-right p {
   width: 90%;
+  font-size: 16px;
+  font-weight: bold;
+  color: #0066cc;
 }
 /*****************************About-myself-end******************************/
 /****************************work-start*****************************/
@@ -145,7 +149,7 @@ header .container nav ul li a:hover {
   height: 360px;
   margin: 5px;
   background-color: #99ccff;
-  border: 6px solid #99ccff;
+  border: 3px solid #99ccff;
   overflow: hidden;
   border-radius: 15px;
   position: relative;
@@ -228,6 +232,27 @@ header .container nav ul li a:hover {
   opacity: 1;
 }
 /*****************************work-end******************************/
+/****************************Résumé-start*****************************/
+#Resume {
+  margin: 20px;
+}
+#Resume .container {
+  display: flex;
+}
+#Resume .container .resume-left {
+  flex: 1;
+}
+#Resume .container .resume-right {
+  flex: 3;
+}
+#Resume .container .resume-right p {
+  width: 90%;
+  margin: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #0066cc;
+}
+/*****************************Résumé-end******************************/
 /****************************footer-start*****************************/
 footer {
   margin: 20px;
